@@ -9,7 +9,75 @@
     <main>
         <h1>Show letter grade</h1>
         <script>
+             let grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+            while(grade != 999){
+                if( grade <= 100 && grade >= 94){
+                    document.write("Grade " + grade +" = A")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                } 
+                else if( grade < 94 && grade >= 90){
+                    document.write("Grade " + grade +" = A-")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if( grade < 90 && grade >= 87){
+                    document.write("Grade " + grade +" = B+")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 87 && grade >= 84){
+                    document.write("Grade " + grade +" = B")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 84 && grade >= 80){
+                    document.write("Grade " + grade +" = B-")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 80 && grade >= 77){
+                    document.write("Grade " + grade +" = C+")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 77 && grade >= 74){
+                    document.write("Grade " + grade +" = C")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 74 && grade >= 70){
+                    document.write("Grade " + grade +" = C-")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 70 && grade >= 67){
+                    document.write("Grade " + grade +" = D+")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 67 && grade >= 64){
+                    document.write("Grade " + grade +" = D")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 67 && grade >= 60){
+                    document.write("Grade " + grade +" = D-")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                }
+                else if(grade < 60 && grade >= 0){
+                    document.write("Grade " + grade +" = E")
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                    document.write("<br>")
+                } else{
+                    grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+                }
+                 
 
+                    
+        }
+             
         </script>
     </main>
 </body>
