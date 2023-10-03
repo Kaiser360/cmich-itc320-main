@@ -8,8 +8,20 @@
     <main>
         <h1>Convert from Fahrenheit to Celsius</h1>
         <script>
-            alert("I was changed in GitHub!");
-
+          let fahrenheit = prompt("Enter Fahernheit temperature ");
+          while(fahrenheit != 999){
+          if( fahrenheit > 212 || fahrenheit < -100) {
+            alert("You Entered: " + fahrenheit + "." + "\n Entry must range between +212 and -100.");
+            fahrenheit = prompt("Enter Fahernheit temperature ");
+           } else{ 
+            let celsuis = (fahrenheit -32) * (5/9);
+           document.write(fahrenheit + " F = " + celsuis.toFixed(1) + " C ");
+           
+           fahrenheit = prompt("Enter Fahernheit temperature ");
+           document.write("<br>");
+           }
+           
+        }
         </script>
     </main>
 </body>

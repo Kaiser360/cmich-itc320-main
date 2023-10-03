@@ -24,6 +24,12 @@ const processEntries = () => {
         $("#mpg").value = (miles / gallons).toFixed(2);
     }
 };
+const clearEntries = () => {
+    const miles = parseFloat($("#miles").value);
+    const gallons = parseFloat($("#gallons").value);
+
+    
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     $("#calculate").addEventListener("click", processEntries);
