@@ -9,8 +9,11 @@
     <main>
         <h1>Show letter grade</h1>
         <script>
+            //prompting for user input
              let grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")
+             //while loop to check if grade is 999 and exit if so 
             while(grade != 999){
+                //if-else-if statement to check the grade the user inputted and assign it a letter grade 
                 if( grade <= 100 && grade >= 94){
                     document.write("Grade " + grade +" = A")
                     grade = prompt("Enter number grade from 0 through 100 \n or enter 999 to end entries")

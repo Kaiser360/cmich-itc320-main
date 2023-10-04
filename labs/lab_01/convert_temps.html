@@ -9,14 +9,17 @@
         <h1>Convert from Fahrenheit to Celsius</h1>
         <script>
           let fahrenheit = prompt("Enter Fahernheit temperature ");
+          //while loop for if the fahrenheit is not 999 keep looping
           while(fahrenheit != 999){
+            //if-else for input validation, if the user 
           if( fahrenheit > 212 || fahrenheit < -100) {
             alert("You Entered: " + fahrenheit + "." + "\n Entry must range between +212 and -100.");
             fahrenheit = prompt("Enter Fahernheit temperature ");
            } else{ 
+            //calculating celsuis and writing it to the document
             let celsuis = (fahrenheit -32) * (5/9);
            document.write(fahrenheit + " F = " + celsuis.toFixed(1) + " C ");
-           
+           //reprompting the user 
            fahrenheit = prompt("Enter Fahernheit temperature ");
            document.write("<br>");
            }
