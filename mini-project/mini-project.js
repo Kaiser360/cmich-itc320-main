@@ -30,14 +30,23 @@ if(isValid){
 
 const removeFromList = () => {
 const itemRemove = $("#removeTask").value; 
+let isValid = false;
 for(let i = 0; i < list.length;i++){
     if(itemRemove == list[i]){
         list.splice(i,1);
         displayList();
+        isValid = true;
+       
     } else{
         displayList();
     }
-} 
+}
+if(!isValid){
+    alert(itemRemove + " is not on the list");
+    $("#removeTask").value = " ";
+} else{
+    $("#removeTask").value = " ";
+}
 
 }
 
