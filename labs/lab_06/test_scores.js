@@ -1,30 +1,35 @@
 "use strict";
 const $ = selector => document.querySelector(selector);
-
+$("#name").focus();
 const names = ["Ben", "Joel", "Judy", "Anne"];
 const scores = [88, 98, 77, 88];
 
 const displayResults = () =>{
 	let size = scores.length;
-	let average = 0;
+	let totalScore = 0;
 	let highestScore = 0;
 	let highestScoreIndex = 0;
-	let highestScoreName = " ";
+	let highestScoreName = "";
+	let average = 0;
 for(let i = 0; i < size; i++){
-	 average += scores[i];
+	 totalScore += scores[i];
+
 	if(highestScore < scores[i]){
 		highestScore = scores[i];
 		highestScoreIndex = i;
 		highestScoreName = names[highestScoreIndex];
 	}
 }
-average = average/size
+average = totalScore/size;
+
 const heading = document.createElement('h2');
 heading.textContent = 'Results';
 document.body.appendChild(heading);
+
 const p = document.createElement('p');
 p.textContent = 'Average Score = ' + average.toFixed(0);
 document.body.appendChild(p);
+
 const p1 = document.createElement('p');
 p1.textContent = 'High Score is ' + highestScoreName + ' with a ' + highestScore;
 document.body.appendChild(p1);
@@ -32,7 +37,21 @@ document.body.appendChild(p1);
 }
 
 const addScore = () => {
-
+let name = $("#name").value;
+let score = $("#score").value;
+if(name === ""){
+	document.getElementById("nameError").textContent = "Please enter a name";
+} else{
+	names.push(name);
+	$("#name").value = "";
+}
+if(score < 0 || score > 100){
+	document.getElementById("scoreError").textContent = "Score must be between 0 and 100";
+}else{
+scores.push(score)
+$("#score").value = "";
+}
+$("#name").focus();
 }
 const displayScores = () => {
 const heading = document.createElement('h2');
