@@ -1,11 +1,30 @@
 "use strict";
+const dialog = () =>{
+	$( "#dialog" ).dialog({
+		appendTo: "p"
+	});
+}
 
 $(document).ready( () => {
 	const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
 	
 	// move the focus to the first text box
 	$("#arrival_date").focus();
-	
+	$.datepicker.setDefaults({
+		showOn: "both",
+		buttonImageOnly: true,
+		buttonImage: "calendar.gif",
+		buttonText: "Calendar"
+	  });
+	  $( "#arrival_date" ).datepicker({
+		maxDate: "+3m",
+	  dateFormat: "mm/dd/yy"
+	  });
+
+	  $("#policies").addEventListener("click", dialog);
+	  
+	  
+});
 	// the handler for the submit event of the form
 	// executed when the submit button is clicked
 	$("#reservation_form").submit( evt => {
