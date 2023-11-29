@@ -9,14 +9,14 @@ $(document).ready( () => {
 	const formValidation = () =>{
 		const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
 		
-		
+		//storing the variables
 		let arrive = $("#arrival_date").val();
 		let nights = $("#nights").val();
 		let name = $("#name").val();
 		let email = $("#email").val();
 		let phone = $("#phone").val();
 		let isValid = true;
-		
+		//checking for valid data and displaying to the span if it is not valid 
 		if(arrive === "" ){
 			isValid = false;
 			document.getElementById("arrival_dateError").textContent = "This field is required";
@@ -55,6 +55,7 @@ $(document).ready( () => {
 		
 		return isValid;
 		}
+		//preventing form from submitting if there is invalid data.
 	$("#submit").on("click",evt => {
 	if(!formValidation()){
 		evt.preventDefault();

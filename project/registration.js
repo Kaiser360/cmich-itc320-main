@@ -103,7 +103,16 @@ $(document).ready( () => {
         } else {
             document.getElementById("stateError").textContent = "";
         }
-		
+		if(isValid){
+			sessionStorage.setItem("userFirst",firstName);
+            sessionStorage.setItem("userLast",lastName);
+			sessionStorage.setItem("userEmail",email);
+            sessionStorage.setItem("userPhone",phone);
+			sessionStorage.setItem("userDate",date);
+			sessionStorage.setItem("userState",state);
+            sessionStorage.setItem("userZip",zip);
+			location.assign("confirmation.html")
+		}
 		return isValid;
 		}
 	$("#submit").on("click",evt => {

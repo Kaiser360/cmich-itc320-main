@@ -53,7 +53,13 @@ $(document).ready( () => {
         }
         
         if (isValid) { 
+            //setting the input to session storage
+            sessionStorage.setItem("userEmail",email);
+            sessionStorage.setItem("userPhone",phone);
+            sessionStorage.setItem("userZip",zip);
+            sessionStorage.setItem("userDOB",dob);
             // code that saves profile info goes here
+            location.assign("profile.html")
         }
         
         $("#email").focus(); 

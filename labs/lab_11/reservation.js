@@ -16,6 +16,7 @@ $(document).ready( () => {
 		buttonImage: "calendar.gif",
 		buttonText: "Calendar"
 	  });
+	  // allowing guests to only pick three months in advance
 	  $( "#arrival_date" ).datepicker({
 		maxDate: "+3m",
 	  dateFormat: "mm/dd/yy"
@@ -92,4 +93,4 @@ $(document).ready( () => {
 			}
 		} // end function
 	);	// end submit
-}); // end ready
+ // end ready
