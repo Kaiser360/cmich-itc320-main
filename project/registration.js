@@ -98,7 +98,7 @@ $(document).ready( () => {
             document.getElementById("zipError").textContent = "";
         }
         if(state.length !==2 || state === "" || !stateCodes.includes(state) ){
-            document.getElementById("stateError").textContent = "*Must be a valid state code";
+            document.getElementById("stateError").textContent = "*Must be a valid state code and its case sensative";
             isValid = false;
         } else {
             document.getElementById("stateError").textContent = "";
@@ -120,5 +120,16 @@ $(document).ready( () => {
 		evt.preventDefault();
 	}
 });
+
+	$("#clear").on("click", () => {
+		$("#date").val("");
+		$("#fname").val("");
+		$("#lname").val("");
+		$("#email").val("");
+        $("#re-email").val("");
+		$("#phone").val("");
+        $("#state").val("");
+        $("#zip").val("");
+	});
 
 }); 

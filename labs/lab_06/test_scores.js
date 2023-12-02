@@ -12,7 +12,7 @@ const displayResults = () =>{
 	let highestScoreIndex = 0;
 	let highestScoreName = "";
 	let average = 0;
-
+	
 	//for loop to iterate the size of the arrays
 for(let i = 0; i < size; i++){
 	//adding up the total score
@@ -44,6 +44,7 @@ document.body.appendChild(p1);
 const addScore = () => {
 let name = $("#name").value;
 let score = $("#score").value;
+
 //data validation
 if(name === ""){
 	document.getElementById("nameError").textContent = "Please enter a name";
@@ -54,7 +55,7 @@ if(name === ""){
 if(score < 0 || score > 100){
 	document.getElementById("scoreError").textContent = "Score must be between 0 and 100";
 }else{
-scores.push(score)
+scores.push(parseInt(score));
 $("#score").value = "";
 }
 $("#name").focus();
