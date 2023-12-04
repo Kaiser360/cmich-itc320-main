@@ -2,12 +2,23 @@
 
 const domain = "https://api.nasa.gov/mars-photos/api/v1/rovers";
 // for better results, sign up for an API key and replace DEMO_KEY with your key
-const request = "?api_key=DEMO_KEY&page=1";
+const request = "?api_key=5VTOwQOWy6IVSbN5HMvy9Mm6LLJguoFvokVcdlqN&page=1";
 
 const roverData = new Map();
 
 // asynchronous getJson() function that makes API requests goes here
-
+const  getJson = async () =>{
+    //combining key and domain
+        const url = domain + request;
+        //requesting the data
+        const response = await fetch(url);
+        //taking the data
+        const receive = await response.json();
+        //displaying url
+        console.log(url);
+        //returning the data recieved from api call
+        return receive;   
+}
 const getSelectedDate = () => {
     const year = $("#year").val();
     const month = $("#month").val();
